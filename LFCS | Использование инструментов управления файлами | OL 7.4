@@ -1,0 +1,60 @@
+Cоздать структуру каталогов /tmp/files/suse,/tmp/files/rhel и /tmp/files/ol 
+
+[idenis@ol74 ~]$ mkdir -p /tmp/files/suse
+[idenis@ol74 ~]$ mkdir -p /tmp/files/rhel
+[idenis@ol74 ~]$ mkdir -p /tmp/files/ol 
+
+
+
+Cкопируйте все файлы с именем, начинающимся с a, b или c, из файла /etc в /tmp/files
+
+[idenis@ol74 ~]$ cp /etc/[a-c]* /tmp/files
+
+
+
+
+Из /tmp/files, переместите все файлы с именем, начинающимся с a или b в /tmp/files/rhel,
+и файлы с именем, начинающимся с в  /tmp/files/ol 
+
+[idenis@ol74 files]$ mv [ab]* rhel/
+[idenis@ol74 files]$ cd rhel/
+[idenis@ol74 photos]$ ll
+[idenis@ol74 files]$ mv  c*  ol/
+[idenis@ol74 files]$ ls -R ol/
+
+
+
+
+Найти все файлы в файле /etc, размер которых меньше 1 Mбайт, и скопировать их в /tmp/files/suse
+
+[idenis@ol74 suse]$ find /etc/ -size -1M  -exec  cp {} suse \; 2>/dev/null  
+ll  suse/
+
+
+
+
+
+
+ln /tmp/files, создать символическую ссылку на / var
+
+
+
+
+
+[idenis@ol74 files]$ ln -s var . 
+[idenis@ol74 files]$ ll
+
+lrwxrwxrwx. 1 idenis idenis     3 Nov 26 18:41 var -> var
+
+[idenis@ol74 files]$ 
+
+
+
+
+
+
+
+
+
+
+
