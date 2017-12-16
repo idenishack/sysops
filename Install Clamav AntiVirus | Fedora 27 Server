@@ -1,0 +1,25 @@
+Установика Clamav AntiVirus
+
+Clam AntiVirus для защиты вашей системы от вирусов.
+
+Установика Clamav
+
+# dnf -y install clamav clamav-update 
+
+# vi /etc/freshclam.conf 
+
+# линия 8:закомментировать, если включен
+#Example 
+
+# обновить файлы шаблонов
+# freshclam 
+
+#выполнить сканирование
+# clamscan --infected --remove --recursive /home 
+
+
+# скачать пробный вирус
+# wget http://www.eicar.org/download/eicar.com 
+
+# clamscan --infected --remove --recursive . 
+# только что обнаружено и удалено
