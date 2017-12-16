@@ -1,0 +1,22 @@
+Настройка ssh-сервера для входа на сервер с удаленного компьютера.
+
+# vi /etc/ssh/sshd_config 
+
+# строка 47: изменить (запретить вход в систему удаленно)
+PermitRootLogin no
+
+# строка 73: раскомментировать
+
+PermitEmptyPasswords no
+PasswordAuthentication yes
+
+# systemctl restart sshd 
+
+Если Firewalld запущен, разрешите службу SSH. SSH использует 22 / TCP.
+
+# firewall-cmd --add-service=ssh --permanent
+success
+
+# firewall-cmd --reload
+success 
+
