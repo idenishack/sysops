@@ -19,8 +19,10 @@ PasswordAuthentication yes
 
 Если Firewalld запущен, разрешите службу SSH. SSH использует 22 / TCP.
 
+# firewall-cmd --list-service 
 # firewall-cmd --add-service=ssh --permanent
 success
+# firewall-cmd --list-service 
 
 # firewall-cmd --reload
 success 
