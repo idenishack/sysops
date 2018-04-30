@@ -1,0 +1,29 @@
+ LFCS | Использование sudo для выполнения задач администрирования | RHEL 7.5 Beta 1
+ 
+ 
+  $ sudo -s 
+idenis is not in the sudoers file.  This incident will be reported.
+
+$ su -
+Password: 
+Last login: Sat Mar 31 12:44:06 EEST 2018 on pts/0
+
+
+#  id idenis
+uid=1000(idenis) gid=1000(idenis) groups=1000(idenis)
+
+
+# usermod -aG wheel idenis
+
+#  id idenis
+uid=1000(idenis) gid=1000(idenis) groups=1000(idenis),10(wheel)
+
+# visudo 
+/wheel
+ZZ
+
+logout gui 
+
+logout cli 
+
+sudo -i 
