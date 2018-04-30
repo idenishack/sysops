@@ -1,0 +1,20 @@
+LFCS | Создание простой конфигурации sudo | OL 7.5
+
+
+$ sudo visudo
+
+## Allows members of the users group to shutdown this system
+# %users  localhost=/sbin/shutdown -h now
+
+adm  ALL=/sbin/useradd
+
+sudo adduser adm1
+
+sudo passwd adm1
+
+sudo su - adm1 or su - adm1
+
+
+sudo useradd adm2 
+
+sudo passwd adm2 
