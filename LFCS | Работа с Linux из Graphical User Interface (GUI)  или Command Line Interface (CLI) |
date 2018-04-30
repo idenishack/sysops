@@ -1,0 +1,29 @@
+LFCS | Работа с Linux из Graphical User Interface (GUI)  или Command Line Interface (CLI) | 
+
+suse 
+
+chvt - изменение  виртуального терминала
+
+w - Показывать, кто залогинился в системе
+
+ctrl+shift+t - новая вкладка терминала
+
+
+chvt 2  or ctrl+alt+F2
+
+root
+
+w
+
+
+chvt 7  or ctrl+alt+F7
+
+
+ubuntu
+
+ssh  idenis@192.168.0.113
+
+w
+
+chvt 3 
+
