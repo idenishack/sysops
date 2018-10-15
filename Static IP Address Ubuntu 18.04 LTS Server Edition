@@ -1,0 +1,18 @@
+sudo vim /etc/netplan/50-cloud-init.yaml
+
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens3:
+      dhcp4: no
+      # IP address/subnet mask
+      addresses: [192.168.0.100/24]
+      # default gateway
+      gateway4: 192.168.0.1
+      nameservers:
+        # name server this host refers
+        addresses: [192.168.0.1]
+      dhcp6: no
+	  
+sudo netplan apply
