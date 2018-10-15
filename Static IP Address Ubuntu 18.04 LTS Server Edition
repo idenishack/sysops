@@ -4,7 +4,7 @@ network:
   version: 2
   renderer: networkd
   ethernets:
-    ens3:
+    eth0:
       dhcp4: no
       # IP address/subnet mask
       addresses: [192.168.0.100/24]
