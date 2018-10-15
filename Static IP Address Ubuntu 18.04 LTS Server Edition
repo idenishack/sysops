@@ -5,14 +5,11 @@ network:
   renderer: networkd
   ethernets:
     eth0:
-      dhcp4: no
-      # IP address/subnet mask
-      addresses: [192.168.0.100/24]
-      # default gateway
+      addresses:
+        - 192.168.0.100/24
       gateway4: 192.168.0.1
       nameservers:
-        # name server this host refers
-        addresses: [192.168.0.1]
-      dhcp6: no
+          search: [mydomain, otherdomain]
+          addresses: [192.168.0.1, 8.8.4.4]
 	  
 sudo netplan apply
